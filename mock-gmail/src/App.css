@@ -43,6 +43,18 @@ h3{
   text-emphasis: soft;
 }
 div{
-  background-color: palegoldenrod;
+  background-color: black;
+  color: antiquewhite;
   padding-top: 2em;
 }
+
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 5px;
+}
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.747);
+}
+

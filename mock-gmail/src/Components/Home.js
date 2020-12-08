@@ -7,6 +7,7 @@ const Home = ({ emails }) => {
       <>
       <span>INBOX</span>
         <Email data={emails2}/>
+        
       </>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import Popup from 'reactjs-popup';
 
 const Email = ({ data }) => {
     
@@ -7,7 +8,20 @@ const Email = ({ data }) => {
       <div>
         <h2>{data[x].subject}</h2>
             <h3>From: {data[x].sender}</h3>
-            <p>{data[x].message.substring(0,100) + '...'} </p>
+            <blockquote>{
+              data[x].message.substring(0,100) + '...'
+              } 
+            </blockquote>
+            <Popup trigger={<button>Read Full Email</button>} position="right center">
+              <div>
+                 <h2>{data[x].subject}</h2>
+                 <h3>From: {data[x].sender}</h3>
+                  <blockquote>{
+                     data[x].message} 
+                  </blockquote>
+                  <h4>{data[x].date}</h4>
+              </div>
+            </Popup>
       </div>
     )
     var emailArray=[]

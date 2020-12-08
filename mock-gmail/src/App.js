@@ -39,6 +39,7 @@ class App extends Component {
           <Route exact path='/'>
             <Home emails={this.state.emails}/>
           </Route>
+          
         </Switch>
       </Router>
     );
