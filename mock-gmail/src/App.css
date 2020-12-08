@@ -38,5 +38,11 @@
 }
 span {
   background-color: red;
-
+}
+h3{
+  text-emphasis: soft;
+}
+div{
+  background-color: palegoldenrod;
+  padding-top: 2em;
 }

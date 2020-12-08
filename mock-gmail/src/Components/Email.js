@@ -5,13 +5,19 @@ const Email = ({ data }) => {
     
     const emailChunk = (x) => (
       <div>
-        <h3>{data[x].sender}</h3>
-          <p>{data[x].message.substring(0,100) + '...'} </p>
+        <h2>{data[x].subject}</h2>
+            <h3>From: {data[x].sender}</h3>
+            <p>{data[x].message.substring(0,100) + '...'} </p>
       </div>
     )
+    var emailArray=[]
+    for (var z = 0; z < data.length; z++)
+    {
+        emailArray.push(emailChunk(z))
+    }
     return (
       <article>
-        { emailChunk(0) }
+        { emailArray }
       </article>
     )
 }
