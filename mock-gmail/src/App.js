@@ -10,7 +10,6 @@ import {
   Link
 } from 'react-router-dom'
 
-
 class App extends Component {
   constructor(){
   super()
@@ -31,16 +30,30 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <Router>
+        <ul>
+          <li><Link to='/'>Home</Link></li>
+        </ul>
+
+        <Switch>
+          <Route exact path='/'>
+            <Home emails={this.state.emails}/>
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
+}
+
+export default App;
+
+
+/*
+<div className="App">
         <header className="App-header">
           <p>
             {this.state.emails[0].sender}
           </p>
           
         </header>
-      </div>
-    );
-  }
-}
-
-export default App;
+      </div>*/
