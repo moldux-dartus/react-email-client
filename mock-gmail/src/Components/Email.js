@@ -1,11 +1,18 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-const Email = ({ emails }) => {
+const Email = ({ data }) => {
+    
+    const emailChunk = (x) => (
+      <div>
+        <h3>{data[x].sender}</h3>
+          <p>{data[x].message.substring(0,100) + '...'} </p>
+      </div>
+    )
     return (
-        <li>
-        <h2>{emails.sender}</h2>
-      </li>
+      <article>
+        { emailChunk(0) }
+      </article>
     )
 }
 export default Email
